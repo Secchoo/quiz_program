@@ -47,3 +47,9 @@ def quiz_question_saver():
 
 def main_menu():
     """ This function is responsible for displaying the main menu."""
+
+    print("Welcome to the Quiz Creator!")
+    print("1. Create a new quiz question")
+    print("2. Exit")
+    choice = input("Enter your choice: ")
+    return choice
