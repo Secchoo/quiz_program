@@ -1,5 +1,10 @@
 def questions_getter():
     """ This function is responsible for getting questions from the user."""
+    question = input("Enter the question: ")
+    #makes sure that the question is not empty
+    if question == "":
+        print("Question cannot be empty.")
+        return questions_getter()
 
 def choices():
     """ This function is responsible for getting choices from the user."""
