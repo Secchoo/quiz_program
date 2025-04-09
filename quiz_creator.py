@@ -17,6 +17,17 @@ def questions_getter():
 def choices():
     """ This function is responsible for getting choices from the user."""
 
+    #prompts the user to enter the choices
+    choice1 = input("Enter choice 1: ")
+    choice2 = input("Enter choice 2: ")
+    choice3 = input("Enter choice 3: ")
+    choice4 = input("Enter choice 4: ")
+
+    #makes sure that the choices are not empty
+    if choice1 == "" or choice2 == "" or choice3 == "" or choice4 == "":
+        print("Choices cannot be empty.")
+        return choices()
+
 def correct_answer():
     """ This function is responsible for getting the correct answer from the user."""
 
