@@ -183,14 +183,21 @@ def delete_questions(filename="quiz_record.txt"):
 
 
 def display_menu():
-    """Display the main menu."""
-    # Print the available menu options
-    print("\n=== Quiz Creator Menu ===")
-    print("1. Add Question")
-    print("2. View Questions")
-    print("3. Edit Question")
-    print("4. Delete Question")
-    print("5. Exit")
+    """Display the main menu with colors and emojis."""
+    # ANSI escape codes for colors
+    CYAN = '\033[96m'
+    GREEN = '\033[92m'
+    YELLOW = '\033[93m'
+    RED = '\033[91m'
+    RESET = '\033[0m'
+
+    # Print the menu with colors and emojis
+    print(f"\n{CYAN}=== 🎉 Quiz Creator Menu 🎉 ==={RESET}")
+    print(f"{GREEN}1️⃣  ➕ Add Question{RESET}")
+    print(f"{YELLOW}2️⃣  👁️  View Questions{RESET}")
+    print(f"{CYAN}3️⃣  ✏️  Edit Question{RESET}")
+    print(f"{RED}4️⃣  🗑️  Delete Question{RESET}")
+    print(f"{GREEN}5️⃣  ✅ Exit{RESET}")
 
 
 def main():
