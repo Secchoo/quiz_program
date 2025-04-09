@@ -28,13 +28,17 @@ def choices():
             print("Choice cannot be empty.")
         return answers
 
-def correct_answer():
+def correct_answer(answers):
     """ This function is responsible for getting the correct answer from the user."""
     
-    #prompts the user to enter the correct answer
-    answer = input("Enter the correct answer: ")
-
-    #
+    while True:
+        print("\nSelect the correct answer for the question: ")
+        for i, answer in enumerate(answers):
+            print(f"{i+1}. {answer}")
+        choice = input("Enter the letter of the correct answer: ")
+        if choice in ['a', 'b', 'c', 'd']:
+            return choice
+        print("Invalid choice. Please enter a letter from a to d.")
 
 
 
