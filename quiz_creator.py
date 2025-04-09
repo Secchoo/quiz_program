@@ -4,10 +4,8 @@ import os
 def questions_getter():
     """Get a question from the user."""
     while True:
-        # Prompt the user to enter a question
         question = input("\nEnter your question: ").strip()
         if question:
-            # Return the question if it is not empty
             return question
         # Notify the user that the question cannot be empty
         print("Question cannot be empty!")
@@ -27,9 +25,7 @@ def choices():
                 # Append the answer to the list if it is not empty
                 answers.append(answer)
                 break
-            # Notify the user that the answer cannot be empty
             print("Answer cannot be empty!")
-    # Return the list of answers
     return answers
 
 
@@ -47,9 +43,7 @@ def correct_answer(answers):
         # Prompt the user to enter the letter of the correct answer
         choice = input("Enter the letter of the correct answer: ").lower().strip()
         if choice in letters:
-            # Return the correct answer if the input is valid
             return choice
-        # Notify the user of invalid input
         print("Invalid choice! Please enter a, b, c, or d.")
 
 
