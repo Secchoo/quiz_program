@@ -1,9 +1,17 @@
 def questions_getter():
     """ This function is responsible for getting questions from the user."""
+
+    #prompts the user to enter a question
     question = input("Enter the question: ")
+
     #makes sure that the question is not empty
     if question == "":
         print("Question cannot be empty.")
+        return questions_getter()
+    
+    #makes sure that the input is a sentence
+    if not question.endswith("?"):
+        print("Question must be a sentence.")
         return questions_getter()
 
 def choices():
