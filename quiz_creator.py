@@ -44,6 +44,19 @@ def correct_answer(answers):
 
 def quiz_question_saver():
     """ This function is responsible for saving the quiz question to the text file."""
+    
+    question = questions_getter()
+    answers = choices()
+    correct_answer_choice = correct_answer(answers)
+    
+    #saves the question and answers to a text file
+    with open("quiz_record.txt", "a") as f:
+        f.write(f"Question: {question}\n")
+        for i, answer in enumerate(answers):
+            f.write(f"Choice {i+1}: {answer}\n")
+            f.write(f"Correct Answer: {correct_answer_choice}\n\n")
+    
+        print("Quiz question saved successfully!")
 
 def main_menu():
     """ This function is responsible for displaying the main menu."""
