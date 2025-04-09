@@ -33,17 +33,17 @@ def choices():
     return answers
 
 
-def correct_answer():
+def correct_answer(answer):
     """Get the correct answer from the user."""
     letters = ['a', 'b', 'c', 'd']
 
     while True:
         # Display the prompt to select the correct answer
         print("\nSelect the correct answer:")
-        answers = choices()
+        
 
         # Display the answers with their corresponding letters
-        for letter, answer in zip(letters, answers):
+        for letter, answer in zip(letters, answer):
             print(f"{letter}. {answer}")
 
         # Prompt the user to enter the letter of the correct answer
@@ -100,7 +100,7 @@ def main():
                 # Add a new question to the quiz
                 question = questions_getter()
                 answers = choices()
-                correct_answer_value = correct_answer()
+                correct_answer_value = correct_answer(answers)
                 quiz_question_saver(question, answers, correct_answer_value)
                 print("\nQuestion added successfully!")
             elif choice == '2':
