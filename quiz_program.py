@@ -75,3 +75,13 @@ def get_user_choice():
         if choice in {'A', 'B', 'C', 'D'}:
             return choice
         print(Fore.RED + Style.BRIGHT + "⚠️  Invalid choice! Please enter A, B, C, or D")
+
+
+def calculate_score(selected_option, correct_answer):
+    """Check if answer is correct and return points."""
+    if selected_option == correct_answer:
+        print(Fore.GREEN + Style.BRIGHT + "\n✅ Correct! +1 Point! ✅")
+        return 1
+    print(Fore.RED + Style.BRIGHT + 
+          f"\n❌ Incorrect! Correct answer: {correct_answer} ❌")
+    return 0
