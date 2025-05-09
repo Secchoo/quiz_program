@@ -4,3 +4,24 @@ b. Paris
 c. California
 d. Manila
 Correct answer: b
+Question: Where is japan?
+a. America
+b. Africa
+c. Asia
+d. Europe
+Correct answer: c
+
+Question: What is the capital of the philippines?
+a. Osaka
+b. Dubai
+c. Seoul
+d. Manila
+Correct answer: d
+
+Question: Where is new york located?
+a. America
+b. Europe
+c. Africa
+d. Asia
+Correct answer: a
+
