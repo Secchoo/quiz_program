@@ -103,3 +103,33 @@ def show_final_results(score, total):
         print(Fore.YELLOW + Style.BRIGHT + "\n👍 Good Effort! Keep practicing! 📚")
     else:
         print(Fore.RED + Style.BRIGHT + "\n💪 Never Give Up! Try again! 🔁")
+
+
+def main():
+    """Main quiz program execution."""
+    display_header()
+    questions = get_questions_from_file("quiz_record.txt")
+    
+    if not questions:
+        print(Fore.RED + Style.BRIGHT + "\n😞 No questions found in the quiz file!")
+        return
+    
+    random.shuffle(questions)
+    total_questions = len(questions)
+    score = 0
+
+    for index, question in enumerate(questions, 1):
+        display_header()
+        shuffled_options = present_question(question, index, total_questions)
+        user_choice = get_user_choice()
+        
+        selected_option = shuffled_options[ord(user_choice) - ord('A')]
+        score += calculate_score(selected_option, question['correct'])
+        
+        input(Fore.WHITE + Style.BRIGHT + "\nPress Enter to continue...")
+
+    show_final_results(score, total_questions)
+
+
+if __name__ == "__main__":
+    main()
