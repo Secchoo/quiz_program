@@ -65,3 +65,13 @@ def present_question(question, question_number, total_questions):
         print(Fore.CYAN + Style.BRIGHT + f"   {chr(65 + index)}) {option}")
     
     return options
+
+
+def get_user_choice():
+    """Get and validate user's answer choice."""
+    while True:
+        choice = input(Fore.GREEN + Style.BRIGHT + 
+                       "\n✏️  Your answer (A-D): ").upper()
+        if choice in {'A', 'B', 'C', 'D'}:
+            return choice
+        print(Fore.RED + Style.BRIGHT + "⚠️  Invalid choice! Please enter A, B, C, or D")
