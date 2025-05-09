@@ -85,3 +85,21 @@ def calculate_score(selected_option, correct_answer):
     print(Fore.RED + Style.BRIGHT + 
           f"\n❌ Incorrect! Correct answer: {correct_answer} ❌")
     return 0
+
+
+def show_final_results(score, total):
+    """Display final score with visual feedback."""
+    display_header()
+    percentage = (score / total) * 100
+    print(Fore.YELLOW + Style.BRIGHT + "\n🎉 Quiz Complete! Final Results 🎉")
+    print(Fore.CYAN + Style.BRIGHT + 
+          f"\n📊 Your Score: {score}/{total} ({percentage:.1f}%)")
+    
+    if percentage >= 90:
+        print(Fore.GREEN + Style.BRIGHT + "\n🌈 Perfect Score! You're a genius! 🧠")
+    elif percentage >= 75:
+        print(Fore.GREEN + Style.BRIGHT + "\n🌟 Excellent Work! Keep it up! 💪")
+    elif percentage >= 50:
+        print(Fore.YELLOW + Style.BRIGHT + "\n👍 Good Effort! Keep practicing! 📚")
+    else:
+        print(Fore.RED + Style.BRIGHT + "\n💪 Never Give Up! Try again! 🔁")
