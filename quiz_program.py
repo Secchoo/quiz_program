@@ -51,3 +51,17 @@ def get_questions_from_file(file_path):
 
     return questions 
         
+
+def present_question(question, question_number, total_questions):
+    """Display a single question with formatted output."""
+    print(Fore.MAGENTA + Style.BRIGHT + 
+          f"\n📝 Question {question_number}/{total_questions}")
+    print(Fore.WHITE + Style.BRIGHT + f"\n{question['text']}\n")
+    
+    options = question['options'].copy()
+    random.shuffle(options)
+    
+    for index, option in enumerate(options):
+        print(Fore.CYAN + Style.BRIGHT + f"   {chr(65 + index)}) {option}")
+    
+    return options
